@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "cred" {
-    default = "/Users/yossi.s/.aws/credentials"
+    default = "/path_to_file/.aws/credentials"
 }
 
 variable "ami_id" {
