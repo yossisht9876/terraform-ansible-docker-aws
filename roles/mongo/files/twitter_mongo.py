@@ -18,10 +18,10 @@ keywords = ['docker']
 language = ['en']
 
 # You need to replace these with your own values that you get after creating an app on Twitter's developer portal.
-consumer_key = "dVXQhM04OQLfo3lPXNxPxOxps"
-consumer_secret = "dggn87AyZHpTLI8bWKGWXQcXAxBgPR7akCWPLhIlgg43FvZ90j"
-access_token = "1095029101449089026-idVY1yM7iN5TfSzTzN6ms2XN8DowJX"
-access_token_secret = "tZwqtvGDq2gUSDBZ3GhQ4qC577eFX4DVcS2HR4MVWQSN6"
+consumer_key = "xxxxx"
+consumer_secret = "dggn87Axxxxxxx"
+access_token = "10950xxxx"
+access_token_secret = "tZwqtvGxxxxxxxxxSxxx"
 
 # The below code will get Tweets from the stream and store only the important fields to your database
 class StdOutListener(StreamListener):
