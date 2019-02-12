@@ -1,0 +1,22 @@
+---
+- name: pull mongodb container
+  docker_container:
+     name: db_test
+     image: mongo
+     state: started
+
+- name: create a collection
+  shell: docker exec db_test mongo admin --eval "db.createCollection('twitterMessagesDocker')"
+
+
+- name: copy a the python twitter mongo script with permissions
+  copy:
+     src: /Users/yossi.s/Desktop/terraform/terraform/roles/mongo/files/twitter_mongo.py
+     dest: /tmp/twitter_mongo.py
+     mode: 0755
+
+
+- name: execute twitter mongo script
+  shell: python /tmp/twitter_mongo.py
+  
+

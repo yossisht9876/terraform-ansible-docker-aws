@@ -1,0 +1,26 @@
+--- 
+- name: install Docker, epel-release
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker
+    - epel-release
+
+- name: install python-pip
+  yum:
+    name: python-pip
+    state: present
+
+- name: install docker-py pymongo tweepy modules
+  pip:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker-py
+    - pymongo
+    - tweepy
+
+
+- name: start the docker service on start up 
+  shell: systemctl start docker && chkconfig docker on

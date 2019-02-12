@@ -1,0 +1,24 @@
+---
+- name: run apache container
+  docker_container:
+    name: apache
+    image: gyanblog/php-apache-mongo
+    ports:
+      - "8082:80"
+    state: started
+
+- name: Creates directory
+  file:
+    path: /var/www/html/
+    state: directory
+
+- name: copy info-php to host
+  copy:
+     src: /Users/yossi.s/Desktop/terraform/terraform/roles/apache/files/info.php
+     dest: /var/www/html/info.php
+     mode: 0755
+
+- name: copy info-php to container
+  shell: docker cp /var/www/html/info.php apache:/var/www/html/
+
+    
