@@ -4,9 +4,9 @@ automation with terraform + ansible + docker on AWS
 pre :
 ansible 2.5
 
-create an account on AWS
-create a user for terraform with ec2 permision
-generate access and secret keys
+create an account on AWS.
+create a user for terraform with ec2 permision.
+generate access and secret keys.
 
 you can use them as env varibles or can be stored in cred file
 
