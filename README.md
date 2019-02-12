@@ -45,3 +45,6 @@ in oredr to track twwets on twitter that contain the word "docker"
 that will connect to mongo container and dispaly some of the
 
 tracked tweets on the public host IP :   <public-ip>:8082\info.php
+  
+  
+  *** change the ip to your container ip on the python script
