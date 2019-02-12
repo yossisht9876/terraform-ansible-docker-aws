@@ -1,0 +1,8 @@
+- name: "deploy-all"
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+    - { role: docker-tools }
+    - { role: apache }
+    - { role: mongo }
